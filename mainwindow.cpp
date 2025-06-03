@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     aboutPage = new AboutPage(this);
     reglesPage = new ReglesPage(this);
 
+    homePage = new HomePage(this);
+
     stackedWidget->addWidget(gamePage);  // Index 0: Page d'accueil
     stackedWidget->addWidget(aboutPage); // Index 1: Page "À propos"
     stackedWidget->addWidget(reglesPage); // Index 1: Page "À propos"

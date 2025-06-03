@@ -2,12 +2,14 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QPixmap>
+#include <QSize>
 
 HomePage::HomePage(QWidget *parent)
     : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout(this); // Crée un layout vertical pour la page
 
-    QLabel *titleLabel = new QLabel("Bienvenue dans le jeu du PENDU", this);
+    QLabel *titleLabel = new QLabel("Bienvenue dans le jeu du PENDU !", this);
     titleLabel->setAlignment(Qt::AlignCenter);
     titleLabel->setStyleSheet("font-size: 24px; font-weight: bold;");
 
@@ -24,10 +26,25 @@ HomePage::HomePage(QWidget *parent)
     descriptionLabel4->setAlignment(Qt::AlignCenter);
     descriptionLabel4->setWordWrap(true);
 
+    // homeImage = new QLabel(this);
+    // QPixmap pixmap(":/images/home.png");
+    // if (pixmap.isNull()) {
+    //     // Gérer l'erreur si l'image ne peut pas être chargée
+    //     qWarning("Impossible de charger l'image :/images/logo.png. Vérifiez le chemin et le fichier .qrc.");
+    //     // Vous pouvez définir une image de remplacement ou un texte ici
+    //     homeImage->setText("Image non trouvée");
+    //     homeImage->setStyleSheet("color: red;");
+    // } else {
+    //     // Redimensionne l'image si nécessaire, en gardant les proportions
+    //     homeImage->setPixmap(pixmap.scaled(400, 200, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    // }
+    // homeImage->setAlignment(Qt::AlignCenter); // Centre l'image dans le QLabel
 
     // Ajoute les widgets au layout
     layout->addStretch();
     layout->addWidget(titleLabel);
+    layout->addSpacing(20);
+    // layout->addWidget(homeImage, 0, Qt::AlignCenter);
     layout->addWidget(descriptionLabel1);
     layout->addWidget(descriptionLabel2);
     layout->addWidget(descriptionLabel3);

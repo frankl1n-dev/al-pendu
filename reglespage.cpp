@@ -22,6 +22,10 @@ ReglesPage::ReglesPage(QWidget *parent)
     QLabel *point5= new QLabel("Mot trouvé avec 5 erreurs: ......... 10Pts", this);
     QLabel *point6 = new QLabel("Mot trouvé avec 6 erreurs: ......... 5Pts", this);
 
+    QLabel *descriptionLabel5 = new QLabel("Je vous souhaite bien du plaisir....", this);
+    QLabel *descriptionLabel6 = new QLabel("Et si vous pensez trouver un mot en un coup, c'est que vous pensez que le dictionnaire est petit!", this);
+    QLabel *descriptionLabel7 = new QLabel("Hors, pour votre information, il comprend plus de 336 000 mots... Donc bonne chance !!! :)", this);
+
     descriptionLabel1->setAlignment(Qt::AlignCenter);
     descriptionLabel1->setWordWrap(true);
     descriptionLabel2->setAlignment(Qt::AlignCenter);
@@ -42,7 +46,9 @@ ReglesPage::ReglesPage(QWidget *parent)
     point5->setWordWrap(true);
     point6->setAlignment(Qt::AlignCenter);
     point6->setWordWrap(true);
-
+    descriptionLabel5->setAlignment(Qt::AlignCenter);
+    descriptionLabel6->setAlignment(Qt::AlignCenter);
+    descriptionLabel7->setAlignment(Qt::AlignCenter);
 
     // Ajoute les widgets au layout
     layout->addStretch();
@@ -59,6 +65,10 @@ ReglesPage::ReglesPage(QWidget *parent)
     layout->addWidget(point4);
     layout->addWidget(point5);
     layout->addWidget(point6);
+    layout->addSpacing(30);
+    layout->addWidget(descriptionLabel5);
+    layout->addWidget(descriptionLabel6);
+    layout->addWidget(descriptionLabel7);
     layout->addStretch();
 
     setLayout(layout);

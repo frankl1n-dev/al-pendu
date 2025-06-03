@@ -30,3 +30,16 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
+
+DISTFILES += \
+    images/Pendu-0.png \
+    images/Pendu-1.png \
+    images/Pendu-2.png \
+    images/Pendu-3.png \
+    images/Pendu-4.png \
+    images/Pendu-5.png \
+    images/Pendu-6.png \
+    images/home.png
